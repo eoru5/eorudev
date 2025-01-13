@@ -1,6 +1,4 @@
 import React from 'react';
-import { motion, useAnimate } from 'motion/react';
-import { Link } from 'react-router';
 import NavbarItem from './NavbarItem';
 
 const items = [
@@ -8,15 +6,17 @@ const items = [
     name: 'home',
     label: 'Home',
     link: '/',
-  }, {
-    name: 'courses',
-    label: 'Courses',
-    link: '/courses',
-  }, {
-    name: 'projects',
-    label: 'Projects',
-    link: '/projects',
-  }
+  },
+  // {
+  //   name: 'courses',
+  //   label: 'Courses',
+  //   link: '/courses',
+  // },
+  // {
+  //   name: 'projects',
+  //   label: 'Projects',
+  //   link: '/projects',
+  // }
 ]
 
 const Navbar = ({name}) => {

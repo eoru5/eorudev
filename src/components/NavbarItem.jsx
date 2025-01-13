@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion, useAnimate } from 'motion/react';
+import { motion } from 'motion/react';
 import { Link } from 'react-router';
 
 const defaultClass = 'text-lg hover:bg-clip-text hover:text-transparent hover:bg-grad hover:bg-[length:200%_auto] hover:animate-gradient';
