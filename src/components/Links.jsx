@@ -1,7 +1,7 @@
 import React from 'react';
-import ResumeLink from './ResumeLink';
-import GithubLink from './GithubLink';
-import LinkedinLink from './LinkedinLink';
+import ResumeLink from './links/ResumeLink';
+import GithubLink from './links/GithubLink';
+import LinkedinLink from './links/LinkedinLink';
 
 const Links = () => {
   return (

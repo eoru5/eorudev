@@ -1,5 +1,5 @@
 import React from 'react';
-import SVGLink from './SVGLink';
+import SVGLink from '../SVGLink';
 
 const ResumeLink = () => {
   return (

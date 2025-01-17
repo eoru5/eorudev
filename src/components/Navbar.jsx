@@ -7,11 +7,11 @@ const items = [
     label: 'Home',
     link: '/',
   },
-  // {
-  //   name: 'courses',
-  //   label: 'Courses',
-  //   link: '/courses',
-  // },
+  {
+    name: 'courses',
+    label: 'Courses',
+    link: '/courses',
+  },
   // {
   //   name: 'projects',
   //   label: 'Projects',

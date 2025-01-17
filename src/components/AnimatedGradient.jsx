@@ -7,35 +7,33 @@ const AnimatedGradient = () => {
   const brightnessDelta = useMotionValue(0);
   const hueRotate = useMotionValue('0deg');
 
-  React.useEffect(() => {
-    animate(posDelta, [-3, 3], {
-      ease: "easeInOut",
-      duration: 6,
-      repeat: Infinity,
-      repeatType: "mirror",
-    });
+  animate(posDelta, [-3, 3], {
+    ease: "easeInOut",
+    duration: 6,
+    repeat: Infinity,
+    repeatType: "mirror",
+  });
 
-    animate(posSlowDelta, [-2, 2], {
-      ease: "easeInOut",
-      duration: 8,
-      repeat: Infinity,
-      repeatType: "mirror",
-    });
+  animate(posSlowDelta, [-2, 2], {
+    ease: "easeInOut",
+    duration: 8,
+    repeat: Infinity,
+    repeatType: "mirror",
+  });
 
-    animate(brightnessDelta, [2, 2], {
-      ease: "easeInOut",
-      duration: 10,
-      repeat: Infinity,
-      repeatType: "mirror",
-    });
+  animate(brightnessDelta, [2, 2], {
+    ease: "easeInOut",
+    duration: 10,
+    repeat: Infinity,
+    repeatType: "mirror",
+  });
 
-    animate(hueRotate, ['-10deg', '10deg'], {
-      ease: "easeInOut",
-      duration: 8,
-      repeat: Infinity,
-      repeatType: "mirror",
-    });
-  }, [posDelta, posSlowDelta, brightnessDelta, hueRotate]);
+  animate(hueRotate, ['-10deg', '10deg'], {
+    ease: "easeInOut",
+    duration: 8,
+    repeat: Infinity,
+    repeatType: "mirror",
+  });
 
   const backgroundImage = useMotionTemplate`
     radial-gradient(at calc(40% + ${posDelta}%) calc(55% - ${posDelta}%), hsla(27,85%,13%,0.1) 0px, transparent 50%),
@@ -51,7 +49,7 @@ const AnimatedGradient = () => {
   const filter = useMotionTemplate`hue-rotate(${hueRotate})`
 
   return (
-    <motion.div className='absolute top-0 left-0 h-screen w-screen -z-10 bg-[hsla(230,1%,10%,1)]' style={{ backgroundImage, filter }} />
+    <motion.div className='h-full w-full bg-[hsla(230,1%,12%,1)]' style={{ backgroundImage, filter }} />
   );
 };
 

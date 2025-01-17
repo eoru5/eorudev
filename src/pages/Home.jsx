@@ -73,9 +73,9 @@ const Home = () => {
             <h5 className="text-2xl mt-2">
               Hi, I'm a
               {' '}
-              <span className='bg-clip-text text-transparent bg-grad2 bg-[length:200%_auto]'>software engineer</span>
+              <span className='bg-clip-text text-transparent bg-grad2 bg-[length:200%_auto] hover:animate-gradient'>software engineer</span>
               {' '}
-              passionate in frontend and backend engineering, and game development.
+              passionate in frontend engineering and game development.
             </h5>
             <Links />
           </div>
