@@ -1,12 +1,25 @@
 import React from 'react';
 import Navbar from './Navbar';
+import { AnimatePresence, motion, useMotionTemplate, useMotionValue, animate } from "framer-motion";
+import AnimatedGradient from './AnimatedGradient';
 import Constellation from './Constellation';
-import { AnimatePresence, motion } from 'motion/react';
 
 const Page = ({component, name}) => {
+
   return (
     <div>
-      <Constellation/>
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{
+          duration: 1,
+          ease: "easeOut",
+        }}
+      >
+        <AnimatedGradient />
+        <Constellation />
+      </motion.div>
+      
       <Navbar name={name}/>
       
       <AnimatePresence mode='wait'>

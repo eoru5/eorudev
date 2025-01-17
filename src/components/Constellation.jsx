@@ -13,7 +13,7 @@ const Constellation = ({
   interactive = true,
   density = 0.0002,
   color = "#888",
-  speed = 0.2,
+  speed = 0.1,
   radius = 1,
   alpha = 0.9,
 }) => {
@@ -115,7 +115,7 @@ const Constellation = ({
 
   return (
     <div className='-z-10'>
-      <canvas ref={canvasRef} className='absolute top-0 left-0 w-screen h-screen bg-stripes bg-cover'/>
+      <canvas ref={canvasRef} className='absolute top-0 left-0 w-screen h-screen'/>
     </div>
   );
 };

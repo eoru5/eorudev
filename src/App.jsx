@@ -4,7 +4,6 @@ import Home from './pages/Home'
 import Page from './components/Page'
 import Projects from './pages/Projects'
 import Courses from './pages/Courses'
-import Todo from './pages/Todo'
 
 const App = () => {
   document.title = 'George Zhu - Software Engineer'
@@ -14,7 +13,7 @@ const App = () => {
       <Routes>
         <Route path="*" element={<Page component={<Home />} name="home"/>} />
         <Route path="/courses" element={<Page component={<Courses />} name="courses"/>} />
-        <Route path="/projects" element={<Page component={<Todo title='Projects' />} name="projects"/>} />
+        <Route path="/projects" element={<Page component={<Projects />} name="projects"/>} />
       </Routes>
     </BrowserRouter>
   );
