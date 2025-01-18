@@ -49,7 +49,7 @@ const AnimatedGradient = () => {
   const filter = useMotionTemplate`hue-rotate(${hueRotate})`
 
   return (
-    <motion.div className='h-full w-full bg-[hsla(230,1%,12%,1)]' style={{ backgroundImage, filter }} />
+    <motion.div className='-z-10 absolute top-0 left-0 h-screen w-screen bg-[hsla(230,1%,12%,1)]' style={{ backgroundImage, filter }} />
   );
 };
 

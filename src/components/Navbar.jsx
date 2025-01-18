@@ -8,15 +8,15 @@ const items = [
     link: '/',
   },
   {
+    name: 'projects',
+    label: 'Projects',
+    link: '/projects',
+  },
+  {
     name: 'courses',
     label: 'Courses',
     link: '/courses',
   },
-  // {
-  //   name: 'projects',
-  //   label: 'Projects',
-  //   link: '/projects',
-  // }
 ]
 
 const Navbar = ({name}) => {
