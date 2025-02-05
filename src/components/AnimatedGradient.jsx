@@ -49,8 +49,28 @@ const AnimatedGradient = () => {
   const filter = useMotionTemplate`hue-rotate(${hueRotate})`
 
   return (
-    <motion.div className='-z-10 absolute top-0 left-0 h-screen w-screen bg-[hsla(230,1%,12%,1)]' style={{ backgroundImage, filter }} />
-  );
+    navigator.userAgent.indexOf('AppleWebKit') != -1
+      ? <StaticGradient />
+      : <motion.div className='-z-10 absolute top-0 left-0 h-screen w-screen bg-[hsla(230,1%,12%,1)]' style={{ backgroundImage, filter }} />
+  )
 };
+
+// quick fix as animated gradient is slow on webkit
+const StaticGradient = () => {
+  const backgroundImage = `
+    radial-gradient(at 40% 55%, hsla(27,85%,13%,0.1) 0px, transparent 50%),
+    radial-gradient(at 60% 50%, hsla(120,95%,15%,0.1) 0px, transparent 50%),
+    radial-gradient(at 15% 15%, hsla(240,91%,11%,1) 0px, transparent 50%),
+    radial-gradient(at 90% 25%, hsla(225,94%,9%,1) 0px, transparent 50%),
+    radial-gradient(at 65% 10%, hsla(211,92%,9%,1) 0px, transparent 50%),
+    radial-gradient(at 15% 90%, hsla(266,90%,10%,1) 0px, transparent 50%),
+    radial-gradient(at 90% 80%, hsla(287,90%,7%,1) 0px, transparent 50%),
+    radial-gradient(at 65% 90%, hsla(256,89%,9%,1) 0px, transparent 50%)
+  `;
+
+  return (
+    <motion.div className='-z-10 absolute top-0 left-0 h-screen w-screen' style={{ backgroundImage }} />
+  )
+}
 
 export default AnimatedGradient;

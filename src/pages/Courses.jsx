@@ -228,13 +228,13 @@ const Courses = () => {
       }}
       className='w-screen h-screen flex flex-col items-center py-32'
     >
-      <table className='z-2 block h-[600px] overflow-auto bg-indigo-950 border border-white border-opacity-25'>
-        <thead className='sticky top-0 bg-indigo-950 border-b-2 border-white border-opacity-25'>
+      <table className='block h-[600px] overflow-auto bg-neutral-900 border border-white border-opacity-25 px-5'>
+        <thead className='sticky top-0 bg-neutral-900 border-b-2 border-white border-opacity-25'>
           <tr>
-            <th className="p-3 bg-clip-text text-transparent bg-grad2 bg-[length:200%_auto]">Code</th>
-            <th className="p-3 bg-clip-text text-transparent bg-grad2 bg-[length:200%_auto]">Title</th>
-            <th className="p-3 bg-clip-text text-transparent bg-grad2 bg-[length:200%_auto]">Term</th>
-            <th className="p-3 bg-clip-text text-transparent bg-grad2 bg-[length:200%_auto]">Mark</th>
+            <th className="p-5">Code</th>
+            <th className="p-5">Title</th>
+            <th className="p-5">Term</th>
+            <th className="p-5">Mark</th>
           </tr>
         </thead>
         <tbody>
@@ -245,11 +245,12 @@ const Courses = () => {
               initial="hidden"
               custom={idx}
               animate="visible"
+              className='border-b border-white border-opacity-25'
             >
-              <td className="p-3 border-b border-white border-opacity-25">{item.code}</td>
-              <td className="p-3 border-b border-white border-opacity-25">{item.title}</td>
-              <td className="p-3 border-b border-white border-opacity-25">{item.term}</td>
-              <td className="p-3 border-b border-white border-opacity-25">{item.mark}</td>
+              <td className="p-5">{item.code}</td>
+              <td className="p-5">{item.title}</td>
+              <td className="p-5">{item.term}</td>
+              <td className="p-5">{item.mark}</td>
             </motion.tr>
           ))}
         </tbody>
