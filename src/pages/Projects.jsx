@@ -78,6 +78,24 @@ const Projects = () => {
             }}
             selected={false}
           />
+
+          <NavbarItem
+            item={{
+              name: 'airytable',
+              label: 'Airytable',
+              link: 'https://airytable.vercel.app/',
+            }}
+            selected={false}
+          />
+
+          <NavbarItem
+            item={{
+              name: 'joe',
+              label: "Joe's Bizzare Dream",
+              link: 'https://www.youtube.com/watch?v=LU36svFzf64',
+            }}
+            selected={false}
+          />
         </motion.div>
       </div>
 
