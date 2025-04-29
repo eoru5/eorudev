@@ -83,7 +83,7 @@ const Projects = () => {
             item={{
               name: 'airytable',
               label: 'Airytable',
-              link: 'https://airytable.vercel.app/',
+              link: 'https://airytable.eoru.dev/',
             }}
             selected={false}
           />
